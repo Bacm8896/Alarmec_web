@@ -6,4 +6,4 @@ Sitio web oficial de **ALARMEC Seguridad Electrónica** (Quito y Valles): porton
 - Recursos en `assets/`.
 - Publicación: GitHub Pages (rama `main`, carpeta raíz) o Cloudflare Pages.
 
-Contacto: WhatsApp 098 700 3533 · contacto@alarmec.com
+Contacto: WhatsApp 098 700 3533 · alarmec.lc@gmail.com
