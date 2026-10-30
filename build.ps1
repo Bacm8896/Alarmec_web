@@ -4,7 +4,10 @@ param([string]$Tailwind = ".\tailwindcss.exe")
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 $tmp = Join-Path $env:TEMP "alarmec-tw.css"
-& $Tailwind -c tailwind.config.js -i src/input.css -o $tmp --minify
+$ErrorActionPreference = 'Continue'
+& $Tailwind -c tailwind.config.js -i src/input.css -o $tmp --minify 2>&1 | Out-Null
+if ($LASTEXITCODE -ne 0) { throw "Tailwind falló (código $LASTEXITCODE)" }
+$ErrorActionPreference = 'Stop'
 $css = [IO.File]::ReadAllText($tmp).Trim()
 $html = [IO.File]::ReadAllText("index.html")
 $html = [regex]::Replace($html, '(?s)/\*tw:start\*/.*?/\*tw:end\*/', { param($m) "/*tw:start*/$css/*tw:end*/" })

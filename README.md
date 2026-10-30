@@ -17,3 +17,7 @@ Tras cambiar clases en `index.html`, descarga el [CLI standalone de Tailwind v3.
 ```
 
 El script compila `src/input.css` con `tailwind.config.js` y reemplaza el CSS entre `/*tw:start*/` y `/*tw:end*/` en `index.html`.
+
+## Créditos
+
+- Foto de portada (`assets/acceso-perimetral-*.jpg`): [Unsplash](https://unsplash.com/photos/a-gated-driveway-with-a-house-in-the-background-pTkARwGPMLg), licencia Unsplash (uso comercial libre).
